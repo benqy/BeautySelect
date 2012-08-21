@@ -1,0 +1,49 @@
+body{margin:0;padding:0;}
+.beauty-select-container{
+	position:relative;
+	display: inline-block;
+	background-color:#fff;
+}
+.beauty-select-current{
+	display:block;
+	padding: 6px;
+	text-decoration: none;
+	color: #444;
+	position: relative;
+	border:1px solid #ccc;
+}
+.beauty-select-current span{
+	display:block;
+	margin-right: 18px;
+}
+.beauty-select-icon{
+	position: absolute;
+	height: 100%;
+	width: 18px;
+	right: 0;
+	top: 0;
+	background: url('beauty-select-sprite.png') no-repeat 0 1px;
+}
+.beauty-select-list{
+	border:1px solid #ccc;
+	border-top: none;
+	display:none;
+	list-style : none;
+	position: absolute;
+	background-color:#fff;
+	padding : 0;
+	margin:0;
+}
+.beauty-select-indextop{
+	z-index:1001;
+}
+.beauty-select-item{
+	display: block;
+	cursor:pointer;
+	padding: 6px;
+	zoom:1;
+	border-bottom: 1px solid #eee;
+}
+.beauty-select-item-current{
+	background-color: #E4F2F5;
+}
