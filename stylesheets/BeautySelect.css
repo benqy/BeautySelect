@@ -22,7 +22,7 @@ body{margin:0;padding:0;}
 	width: 18px;
 	right: 0;
 	top: 0;
-	background: url('beauty-select-sprite.png') no-repeat 0 1px;
+	background: url('Beauty-select-sprite.png') no-repeat 0 1px;
 }
 .beauty-select-list{
 	border:1px solid #ccc;
