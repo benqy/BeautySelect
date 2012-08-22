@@ -34,13 +34,28 @@
 				<hr>
 
 				<section id="main_content">
-					<h3>Welcome to GitHub Pages.</h3>
-								<select id="s1" style="width:150px;" >
-				<option value="1">选项1</option>
-				<option value="2">选项2</option>
-				<option value="3">选项3</option>
-				<option value="4">选项4</option>
-			</select>
+					<h3>创建下拉框</h3>
+					<p>
+						<pre><code>
+					&lt;select name="select" id="s1"&gt;
+						&lt;option value="1"&gt;选项1&lt;/option&gt;
+						&lt;option value="1"&gt;选项2&lt;/option&gt;
+						&lt;option value="1"&gt;选项3&lt;/option&gt;
+						&lt;option value="1"&gt;选项4&lt;/option&gt;
+					&lt;/select&gt;
+					</code></pre>
+						<pre><code>
+						$(function() {
+							$('#s1').beautySelect();
+						});
+					</code></pre>
+						<select id="s1" style="width:150px;" >
+							<option value="1">选项1</option>
+							<option value="2">选项2</option>
+							<option value="3">选项3</option>
+							<option value="4">选项4</option>
+						</select>
+					</p>
 				</section>
 
 				<footer>
@@ -52,12 +67,7 @@
 			</div>
 			<script type="text/javascript">
 				$(function() {
-					$('select').beautySelect({
-						onChange : function(e, data) {
-							alert(data);
-							this.addOption('动态添加的', new Date() * 1);
-						}
-					});
+					$('select').beautySelect();
 				});
 			</script>
 		</div>
