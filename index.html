@@ -45,16 +45,31 @@
 &lt;/select&gt;
 </code></pre>
 <pre><code>
-$(function() {
-  $('#s1').beautySelect();
+var beauty = $('select').beautySelect({
+  onChange : function(obj,data){
+    console.log(obj);
+    alert(data);
+  }
 });
 </code></pre>
-						<select id="s1" style="width:150px;" >
+						效果：<select id="s1" style="width:150px;" >
 							<option value="1">选项1</option>
 							<option value="2">选项2</option>
 							<option value="3">选项3</option>
 							<option value="4">选项4</option>
 						</select>
+					</p>
+					<h3>取值和赋值</h3>
+					<p>
+						<a href="javascript://" id="get-selectval" class="button"><span>取值</span></a>
+						<a href="javascript://" id="set-selectval" class="button"><span>设置值</span></a>
+<pre><code>
+var value = beauty['s1'].val();
+alert(value);
+</code></pre>
+<pre><code>
+beauty['s1'].val(3);
+</code></pre>
 					</p>
 				</section>
 
@@ -67,7 +82,19 @@ $(function() {
 			</div>
 			<script type="text/javascript">
 				$(function() {
-					$('select').beautySelect();
+					var beauty = $('select').beautySelect({
+						onChange : function(obj,data){
+							console.log(obj);
+							alert(data);
+						}
+					});
+					$('#get-selectval').click(function(){
+						var value = beauty['s1'].val();
+						alert(value);
+					});
+					$('#set-selectval').click(function(){
+						beauty['s1'].val(3);
+					});
 				});
 			</script>
 		</div>
