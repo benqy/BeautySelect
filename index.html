@@ -44,8 +44,8 @@
 </code></pre>
 <pre><code>
 var beauty = $('select').beautySelect({
-  onChange : function(obj,data){
-    console.log(obj);
+  onChange : function(e,data){
+    console.log(this);
     alert(data);
   }
 });
@@ -70,6 +70,13 @@ alert(value);
 <pre><code>
 beauty['s1'].val(3);
 </code></pre>
+					<h3>添加新项</h3>
+					<p>
+						<a style="float:none;display:inline-block" href="javascript://" id="add-option" class="button"><span style="padding-left:72px;">添加</span></a>
+					</p>
+<pre><code>
+beauty['s1'].val('选项5',5);
+</code></pre>
 				</section>
 
 				<footer>
@@ -82,8 +89,8 @@ beauty['s1'].val(3);
 			<script type="text/javascript">
 				$(function() {
 					var beauty = $('select').beautySelect({
-						onChange : function(obj,data){
-							console.log(obj);
+						onChange : function(e,data){
+							console.log(this);
 							alert(data);
 						}
 					});
@@ -93,6 +100,10 @@ beauty['s1'].val(3);
 					});
 					$('#set-selectval').click(function(){
 						beauty['s1'].val(3);
+					});
+					
+					$('#add-option').click(function(){
+						beauty['s1'].val('选项5',5);
 					});
 				});
 			</script>
