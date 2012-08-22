@@ -3,6 +3,8 @@ body{margin:0;padding:0;}
 	position:relative;
 	display: inline-block;
 	background-color:#fff;
+	zoom:1;
+	*display: inline; 
 }
 .beauty-select-current{
 	display:block;

@@ -135,6 +135,7 @@
 	 */
     $.fn.beautySelect = function (option) {
         option = $.extend({}, opt, option);
+        var result = {};
         $(this).each(function (i, n) {
             var _ = new BeautySelect(n);
             _initContainer.call(_);
@@ -143,7 +144,9 @@
             option.onChange && _.wrap.bind('change', function (e, data) {
                 option.onChange.call(_, e, data);
             });
+            result[_.selectId] = _;
         });
+        return result;
     }
 })(jQuery);
 
