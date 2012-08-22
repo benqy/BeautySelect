@@ -1,5 +1,7 @@
 #BeautySelect
 =====================
+version 0.1
+
 这几天在项目中需要用到自定义的下拉框，开源的现在有好多个，并且很好用了，比如这个[chosen](http://harvesthq.github.com/chosen/)。
 但是这些插件虽然功能强大，对项目来说却太庞大了，里面大部分功能都用不到，于是就抽空写了个简单的下拉框美化控件BeautySelect。
 
@@ -33,5 +35,5 @@ beauty['s1'].addOption('选项5', 5);
 ```
 
 ###测试截图：
-[img](https://raw.github.com/hmjlr123/BeautySelect/master/image/test.png)
-[img](https://raw.github.com/hmjlr123/BeautySelect/master/image/test2.png)
+![图片1](https://raw.github.com/hmjlr123/BeautySelect/master/image/test.png)
+![图片2](https://raw.github.com/hmjlr123/BeautySelect/master/image/test2.png)
