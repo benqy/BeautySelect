@@ -1,5 +1,5 @@
-body{margin:0;padding:0;}
 .beauty-select-container{
+	margin:0;padding:0;
 	position:relative;
 	display: inline-block;
 	background-color:#fff;
@@ -7,6 +7,7 @@ body{margin:0;padding:0;}
 	*display: inline; 
 }
 .beauty-select-current{
+	margin:0;
 	display:block;
 	padding: 6px;
 	text-decoration: none;
@@ -15,10 +16,12 @@ body{margin:0;padding:0;}
 	border:1px solid #ccc;
 }
 .beauty-select-current span{
+	margin:0;padding:0;
 	display:block;
 	margin-right: 18px;
 }
 .beauty-select-icon{
+	margin:0;padding:0;
 	position: absolute;
 	height: 100%;
 	width: 18px;
@@ -40,6 +43,7 @@ body{margin:0;padding:0;}
 	z-index:1001;
 }
 .beauty-select-item{
+	margin:0;
 	display: block;
 	cursor:pointer;
 	padding: 6px;

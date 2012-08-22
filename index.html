@@ -3,7 +3,6 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -35,7 +34,6 @@
 
 				<section id="main_content">
 					<h3>创建下拉框</h3>
-					<p>
 <pre><code>
 &lt;select name="select" id="s1"&gt;
   &lt;option value="1"&gt;选项1&lt;/option&gt;
@@ -52,6 +50,7 @@ var beauty = $('select').beautySelect({
   }
 });
 </code></pre>
+					<p>
 						效果：<select id="s1" style="width:150px;" >
 							<option value="1">选项1</option>
 							<option value="2">选项2</option>
@@ -64,7 +63,6 @@ var beauty = $('select').beautySelect({
 						<a href="javascript://" id="get-selectval" class="button"><span style="padding-left:72px;">取值</span></a>
 						<a href="javascript://" id="set-selectval" class="button"><span style="padding-left:63px;">设置值</span></a>
 					</p>
-					<br/>
 <pre><code>
 var value = beauty['s1'].val();
 alert(value);
