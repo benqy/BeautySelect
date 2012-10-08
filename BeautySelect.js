@@ -54,20 +54,19 @@
         this.ul.delegate('li', 'mouseover', function () {
             $('.beauty-select-item').removeClass('beauty-select-item-current');
             $(this).addClass('beauty-select-item-current');
-        }).delegate('li', 'mouseout', function () {
-            $(this).removeClass('beauty-select-item-current');
         }).delegate('li', 'click', function () {
             var value = $(this).attr('data-value');
             me.val(value);
             me.hideList();
             me.wrap.trigger('change', [value]);
         })
-        this.ul.mouseleave(function (e) {
-                me.hideList();
+        $(document).click(function (e) {
+            me.hideList();
         });
         this.current.focus(function(){
         	$(this).blur();
-        }).click(function () {
+        }).click(function (e) {
+            e.stopPropagation();
             if (me.listState == 'hide') {
                 me.showList();
             }
@@ -112,6 +111,7 @@
             $('.beauty-select-indextop').removeClass('beauty-select-indextop');
             this.wrap.addClass('beauty-select-indextop');
             this.ul.addClass('beauty-select-indextop').show();
+            this.ul.find('[data-value=' + this.val() + ']').addClass('beauty-select-item-current');
         },
         /**
          *隐藏下拉列表项 
