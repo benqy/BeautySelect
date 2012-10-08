@@ -15,7 +15,7 @@
      */
     var BeautySelect = function (el) {
         if (!el) throw new Error('select is null');
-        if (!el.id) throw new Error('id of select could not be null');
+        //if (!el.id) throw new Error('id of select could not be null');
         this.selectId = el.id;
         this.listState = 'hide';
         this.select = $(el);
@@ -29,18 +29,18 @@
     var _initContainer = function () {
         this.wrap = $('<div class="beauty-select-container" id="' + this.wrapId + '"></div>');
         this.current = $('<a href="javascript://" class="beauty-select-current" id="' + this.currentId + '"></a>');
-        this.currentText = $('<span id="' + this.currentTextId + '"></span>');
+        this.currentText = $('<span class="beauty-select-text" id="' + this.currentTextId + '"></span>');
         this.current.append(this.currentText);
-        this.current.append('<div class="beauty-select-icon"></div>');
+        this.current.append('<div class="beauty-select-icon"><span></span></div>');
         this.wrap.append(this.current);
         this.ul = $('<ul class="beauty-select-list" id="' + this.ulId + '"></ul>');
         this.wrap.append(this.ul);
         this.select.after(this.wrap);
         this.select.hide();
-        this.wrap.width(this.width);
+        this.wrap.width(this.width * 1 + parseInt(this.current.css('padding-right')));
         this.current.width(this.width - parseInt(this.current.css('padding-left')) * 2);
-        this.ul.width(this.width);
-        this.current.height(this.select.height());
+        this.ul.width(this.width * 1 + parseInt(this.current.css('padding-right')));
+        this.current.height(this.select.outerHeight());
     };
     var _initOptions = function () {
         var me = this;
@@ -61,6 +61,9 @@
             me.val(value);
             me.hideList();
             me.wrap.trigger('change', [value]);
+        })
+        this.ul.mouseleave(function (e) {
+                me.hideList();
         });
         this.current.focus(function(){
         	$(this).blur();
@@ -144,7 +147,9 @@
             option.onChange && _.wrap.bind('change', function (e, data) {
                 option.onChange.call(_, e, data);
             });
-            result[_.selectId] = _;
+            if (_.selectId) {
+                result[_.selectId] = _;
+            }
         });
         return result;
     }

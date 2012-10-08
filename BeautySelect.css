@@ -1,51 +1,89 @@
-body{margin:0;padding:0;}
-.beauty-select-container{
-	position:relative;
-	display: inline-block;
-	background-color:#fff;
-	zoom:1;
-	*display: inline; 
+
+.beauty-select-container {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    zoom: 1;
+    *display: inline;
 }
-.beauty-select-current{
-	display:block;
-	padding: 6px;
-	text-decoration: none;
-	color: #444;
-	position: relative;
-	border:1px solid #ccc;
+
+.beauty-select-current {
+    display: block;
+    text-decoration: none;
+    color: #069;
+    height:21px;
+    padding-right:12px;
+    cursor:pointer;
+    position: relative;
+    border: 1px solid #61a6e4;
 }
-.beauty-select-current span{
-	display:block;
-	margin-right: 18px;
+
+.beauty-select-text {
+    height:15px;
+    font-size:12px;
+    overflow:hidden;
+    padding-top:2px;
+    padding-left:5px;
+    border:none;
+    background:none;
 }
-.beauty-select-icon{
-	position: absolute;
-	height: 100%;
-	width: 18px;
-	right: 0;
-	top: 0;
-	background: url('beauty-select-sprite.png') no-repeat 0 1px;
+
+.beauty-select-icon {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 20px;
+    height: 21px;
+    border: 0;
+    background-color: #61A6E4;
+    cursor: pointer;
 }
-.beauty-select-list{
-	border:1px solid #ccc;
-	border-top: none;
-	display:none;
-	list-style : none;
-	position: absolute;
-	background-color:#fff;
-	padding : 0;
-	margin:0;
+
+.beauty-select-icon span {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    color:#fff;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-bottom: 4px dashed transparent;
+    border-left: 4px dashed transparent;
+    border-right: 4px dashed transparent;
+    cursor: pointer;
 }
-.beauty-select-indextop{
-	z-index:1001;
+
+.beauty-select-list {
+    border: 1px solid #b7e3dc;
+    border-top: none;
+    display: none;
+    list-style: none;
+    position: absolute;
+    border-bottom:none;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
 }
-.beauty-select-item{
-	display: block;
-	cursor:pointer;
-	padding: 6px;
-	zoom:1;
-	border-bottom: 1px solid #eee;
+
+.beauty-select-indextop {
+    z-index: 1001;
 }
-.beauty-select-item-current{
-	background-color: #E4F2F5;
+
+.beauty-select-item {
+    display: block;
+    cursor: pointer;
+    padding:4px 6px;
+    font-size:12px;
+    color: #069;
+    zoom: 1;
+    border-bottom: 1px solid #b7e3dc;
+}
+
+.beauty-select-item-current {
+    background-color: #E4F2F5;
 }
