@@ -8,7 +8,7 @@ version 0.1
 目前才刚开始写，功能非常简单，代码也很少，在ie6，7，8，chrome，firefox上测试过了，单元测试截图在最下面。
 特点：小巧，接下来的其他功能和接口将写在扩展的脚本里，样式全部在BeautySelect.css中，可自定义（除了宽度，宽度取select控件的宽度)。
 
-使用示例([demo](http://hmjlr123.github.com/BeautySelect/))：
+使用示例([demo](http://benqy.github.com/BeautySelect/))：
 
 调用插件：
 ```
