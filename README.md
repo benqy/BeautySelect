@@ -35,5 +35,5 @@ beauty['s1'].addOption('选项5', 5);
 ```
 
 ###测试截图（[Qunit](https://github.com/jquery/qunit))：
-![图片1](https://raw.github.com/hmjlr123/BeautySelect/master/image/test.png)
-![图片2](https://raw.github.com/hmjlr123/BeautySelect/master/image/test2.png)
+![图片1](https://raw.github.com/benqy/BeautySelect/master/image/test.png)
+![图片2](https://raw.github.com/benqy/BeautySelect/master/image/test2.png)
